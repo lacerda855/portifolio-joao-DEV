@@ -192,10 +192,13 @@ body::before {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
+  margin-right: -6px;
 }
+.nav-toggle span { width: 22px; }
 .nav-toggle span {
   display: block;
   height: 2px;
@@ -495,7 +498,7 @@ body::before {
   padding: 5px 10px;
   border-radius: 999px;
 }
-.project-links { display: flex; gap: 12px; }
+.project-links { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* =============================================================
    CONTATO
@@ -624,7 +627,7 @@ body::before {
   .hero-badge { top: -12px; right: 4px; width: 110px; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 880px) {
   .nav-toggle { display: flex; }
   .nav-links {
     position: fixed;
@@ -656,4 +659,28 @@ body::before {
 @media (max-width: 480px) {
   .skills-grid { grid-template-columns: 1fr 1fr; }
   .container { padding-inline: 18px; }
+}
+
+@media (max-width: 400px) {
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; }
+  .hero-stats { gap: 18px; }
+  .hero-meta { gap: 8px; }
+  .meta-chip { font-size: 0.74rem; padding: 6px 10px; }
+
+  .terminal-body { padding: 16px; min-height: unset; }
+  .code-block { font-size: 0.78rem; }
+
+  .about-card,
+  .education-card,
+  .skill-card { padding: 18px; }
+  .education-card { flex-direction: column; }
+
+  .project-body { padding: 20px; }
+  .project-links .btn { flex: 1 1 auto; }
+
+  .contact-form { padding: 22px; }
+  .contact-link { padding: 14px; gap: 12px; }
+
+  .section { padding-block: 56px; }
 }
